@@ -71,8 +71,8 @@ namespace Cysharp.Threading
         /// </summary>
         public double TargetFrameRate => _targetFrameRate;
 
-        public LogicLooper(int targetFrameRate, int initialActionsCapacity = 16)
-            : this(TimeSpan.FromMilliseconds(1000 / (double)targetFrameRate), initialActionsCapacity)
+        public LogicLooper(int targetFrameRate, int speedIndex, int initialActionsCapacity = 16)
+            : this(TimeSpan.FromMilliseconds(1000 / (double)targetFrameRate / (double)speedIndex), initialActionsCapacity)
         {
         }
 
